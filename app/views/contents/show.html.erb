@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <a href="<%= @content.url %>"><%= @content.url %></a>
+</p>
+
+<p>
+  <strong>Filter1:</strong>
+  <%= @content.filter1 %>
+</p>
+
+<p>
+  <strong>Filter2:</strong>
+  <%= @content.filter2 %>
+</p>
+
+<p>
+  <strong>Filter3:</strong>
+  <%= @content.filter3 %>
+</p>
+<p>
+	<strong>Number:</strong>
+	<%= @content.number %>
+</p>
+<p>
+  <strong>Timeout:</strong>
+  <%= @content.timeout %>
+</p>
+<p>
+  <strong>Encoding:</strong>
+  <%= @content.encoding %>
+</p>
+<p>
+  <strong>Meta information:</strong>
+  <%= @content.metainfo %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @content.description %>
+</p>
+<p>
+  <strong>Reg Exp Filter: </strong>
+  <%= @content.reg_exp_filter_1 %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content), :class => "btn btn-primary" %> 
+<%= link_to 'Back', contents_path, :class => "btn btn-primary" %>

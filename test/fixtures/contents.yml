@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  url: MyString
+  filter1: MyString
+  filter2: MyString
+  filter3: MyString
+  timeout: 1
+  description: MyText
+
+two:
+  url: MyString
+  filter1: MyString
+  filter2: MyString
+  filter3: MyString
+  timeout: 1
+  description: MyText

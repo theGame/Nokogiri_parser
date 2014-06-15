@@ -1,0 +1,94 @@
+@import "bootstrap";
+body{
+  background-color: #A9E2F3;
+  width:1024px;
+  p.text-info{
+    margin: 20px;
+  }
+  .field_with_errors{
+    align: center;
+  }
+  p#list_link{
+    align: center;
+    margin-left:45%;
+  }
+  #content_url{
+    width: 510px;
+  }
+  #other_filter{
+    float: left;
+    width: 300px;
+    height: auto;
+    margin-left: 120px;
+    margin-top: 120px;
+    i{
+      padding-top: auto;
+    }
+    table{
+      color: #3A87AD;
+    }
+  }
+  #select_filter{
+    float:left;
+    margin-top: 30px;
+    margin-left: 60px;
+    width: 400px;
+    select{
+      margin: 0px 70px;
+    }
+  }
+  #info{
+    align: right;
+  }
+  #dom_filter{
+    float: left;
+    width: 250px;
+    height: auto;
+    margin-left: 100px;
+    margin-top: 40px;
+    i{
+      padding-top: auto;
+    }
+  }
+  hr {
+      border-top:1px solid #3A87AD;
+      margin-top: 0;
+  }
+  #right_info{
+    display: block;
+    width:300px;
+    height: auto;
+    align: right; 
+    position:relative;
+    float:right;
+  }
+  #reg_filter{
+    margin-left: 30px;
+    width: 280px;
+  }
+  #create_content{
+    width: 400px;
+    height: auto;
+    margin-left: 400px;
+    button{
+      margin-left: 35%;
+    }
+  }
+  .text-right{
+    width: 200px;
+  }
+  table.table-bordered{
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    td{
+      width: 100px;
+    }
+    #description{
+      width: 550px;
+      height: 70px;
+      display: block;
+      overflow: scroll;
+    }
+  }
+}

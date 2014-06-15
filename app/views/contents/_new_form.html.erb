@@ -1,0 +1,59 @@
+<%= form_for(@content) do |f| %>
+  <% if @content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
+      <ul>
+      <% @content.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+  <% end %> 
+  <div class="text-center"><i><font size="5" color="#3A87AD" face="cursive">Step 1.</font></i>
+    <%= f.text_field :url, placeholder: "Please write URL address" %>
+  </div>
+  	<div id="dom_filter">
+  		<i><font size="5" color="#3A87AD" face="cursive">Step 2. Dom Filters</font></i>
+  		<hr/>
+		  <%= f.text_field :filter1, placeholder: "Please write Tag"  %>
+		  <%= f.text_field :filter2, placeholder: "Please write Attribute" %>
+		  <%= f.text_field :filter3, placeholder: "Please write Name" %>
+	</div>
+  	<div id="other_filter">
+  		<i><font size="5" color="#3A87AD" face="cursive">Step 3. Other filters</i></font>
+  		<hr />
+  		<table>
+	  		<tr>
+	  			<td><i>Number</i></td>
+	  			<td><%= f.text_field :number, placeholder: "Please write a number" %></td>
+	  		</tr>
+	  		<tr>
+	  			<td><i>Timeout</i></td>
+	  			<td><%= f.number_field :timeout, placeholder: "Please write a number" %></td>
+	  		</tr>
+	  		<tr>
+	  			<td><i>Encoding</i></td>
+	  			<td><%= f.text_field :encoding, placeholder: "Please write encoding page" %></td>
+	  		</tr>
+	    </table>
+ 	</div>
+  <div id="select_filter">
+  	<i><font size="5" color="#3A87AD" face="cursive">Step 4. Choose meta-category</font></i>
+  	<hr />
+  	<%= f.select :metainfo, '<option value="Title">Title</option><option value="URL">URL</option><option value="Ref_ID">Ref_ID</option><option value="Location">Location</option><option value="Salary">Salary</option><option value="Type">Type</option><option value="Caregory">Caregory</option><option value="Contact_Name">Contact_Name</option><option value="Contact_Phone">Contact_Phone</option><option value="Contact_E-mail">Contact_E-mail</option><option value="Experience">Experience</option><option value="Education">Education</option><option value="Street_Address">Street_Address</option><option value="Pub_Date">Pub_Date</option><option value="Pub_Time">Pub_Time</option><option value="Description">Description</option>'.html_safe, :class => "form-control", :prompt => ""  %>
+  </div>
+  <div id="reg_filter">
+    <i><font size="5" face="cursive" color="#3A87AD">Step 5. Reg Exp Filter</font></i>
+    <hr />
+    <%= f.text_field :reg_exp_filter_1, placeholder: "Please write Reg Exp filter" %>
+  </div>
+  <div id="create_content">
+  	<i><font size="5" color="#3A87AD" face="cursive">Step 6. Create vacancy content!</font></i>
+  	<hr />
+  	<button type="submit" value="Create Content" name="commit" class="btn btn-primary">Create content</button>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<h1>Listing contents</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Url</th>
+      <th>Teg</th>
+      <th>Attr</th>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Timeout</th>
+      <th>Encoding</th>
+      <th>Meta information</th>
+      <th>Description</th>
+      <th>Reg Filter 1</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contents.each do |content| %>
+      <tr>
+        <td><a href="<%= content.url %>" target="_blank"><%= content.url %></a></td>
+        <td><%= content.filter1 %></td>
+        <td><%= content.filter2 %></td>
+        <td><%= content.filter3 %></td>
+        <td><%= content.number %></td>
+        <td><%= content.timeout %></td>
+        <td><%= content.encoding %></td>
+        <td><%= content.metainfo %></td>
+        <td id="description"><%= content.description %></td>
+        <td><%= content.reg_exp_filter_1 %></td>
+        <td><%= link_to 'Show', content, class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', edit_content_path(content), class: "btn btn-primary" %></td>
+        <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Content', new_content_path, class: "btn btn-primary btn-xs" %>
+
+<p><%= will_paginate @contents1 %>  </p>
